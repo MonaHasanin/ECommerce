@@ -1,0 +1,124 @@
+:root{
+    --basic: midnightblue;
+    --background: #ddd;
+    --gradient: linear-gradient(#dedede , #343434 ,#434343);
+    --transaction1: 1.5s;
+    --transform: rotate(359deg);
+    --white: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--background);
+}
+header{
+    width: 80%;
+    margin: auto;
+}
+header h2 {
+    font: 1.2em sans-serif;
+    font-weight: 600;
+    color: var(--basic);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--basic);
+}
+.rightNav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+header i #shopping{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 10px;
+    }
+.quantity{
+    position: absolute;
+    cursor: pointer;
+    top: -6px;
+    margin-top: 1px;
+    background-color: red;
+    right: 5px;
+    font-size: 12px;
+    padding: 0.8px;
+    border-radius: 50%;
+}
+ header .cart{
+    position: fixed;
+    /* display: flex; */
+    top:0;
+    right: -100%;
+    /* align-items: center; */
+    width: 350px;
+    height: 100vh;
+    background-color: var(--white);
+    /* right: 0; */
+    justify-content: center;
+    padding: 20px;
+    transition: var(--transaction1);
+    z-index: 999;
+ }
+
+ .cart img {
+    width: 55%;
+    height: 50%;
+ }
+
+ .box {
+    display:flex;
+    flex-direction: column;
+ }
+ header .cart.active{
+    right: 0;
+    transition: var(--transaction1);
+ }
+ .cart h2 {
+    color: #343434;
+   
+ }
+ #close{
+    color: burlywood;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: 0 0 1px  #fd6769;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+ }
+
+ #box{
+    width: 80%;
+margin: auto;
+/* position: relative; */
+ }
+ #content{
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,3fr)) ;
+    /* justify-content: space-around; */
+    /* align-content: center; */
+    border: none;
+    gap: 20px;
+    padding-top: 10px;
+}
+#content img{
+    width: 350px;
+    height: 200px;
+    border: none;
+    border-radius: 20%;
+}
